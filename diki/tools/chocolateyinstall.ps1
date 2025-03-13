@@ -1,12 +1,12 @@
 $ErrorActionPreference = 'Stop'
-$url64      = "https://github.com/gardener/diki/releases/download/v0.14.0/diki-windows-amd64"
+$url64      = "https://github.com/gardener/diki/releases/download/v1.5.0/diki-windows-amd64"
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
   PackageName     = $env:ChocolateyPackageName
   Url64bit        = $url64
   ChecksumType64  = 'sha256'
-  Checksum64      = "7ee1f74728c2cba035710c48919f411875cacd239f811f93b06d0a57fc9fe853"
+  Checksum64      = "e0a7c2dc42d348760cbebc3776453db1971801205be371b6b26d6d72c9e4c388"
   FileFullPath    = "$toolsDir\diki.exe"
 }
 Get-ChocolateyWebFile @packageArgs
